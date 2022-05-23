@@ -35,8 +35,8 @@ img {
 /*ENCABEZADO - HEADER*/
 
 .nav-header {
-    /* background-color: khaki; */
-    height: 17vh ;
+    width: 98%;
+    /* height: 0.01%; */
     margin: 0 auto;
     margin-bottom: 1vh;
     padding: 0px;
@@ -44,7 +44,6 @@ img {
     font-weight: bold;
     font-size: 1.1rem;
     display: flex;
-    /* flex-direction: row; */
     justify-content: space-around;
     align-items:center;
 }
@@ -211,12 +210,9 @@ span {
 
 h1 {
     /* background-color: antiquewhite; */
-
-
     display: inline-block;
     text-align: center;
     /* flex-direction: row; */
-
     /* flex-direction: column; */
     /* justify-content: center; */
     /* font-size: 64px; */
@@ -404,6 +400,7 @@ p {
     margin: 5px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
    /* list-style: none; */
   }
 
@@ -449,11 +446,23 @@ div.fotcont a {
 
 div.red1 {
     width: 15%;
-    margin: 10;
+    margin: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     /* border: 1px solid red; */
 
+}
+
+@media screen and (max-width: 800px) {
+    .contenedor {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contenedor {
+        width: 100%;
+    }
 }
