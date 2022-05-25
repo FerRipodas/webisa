@@ -271,6 +271,14 @@ section {
 
 /* FOTO DE PORTADA */
 
+.contiene {
+    /* REVISAR ESTO ???????  */
+    width: 100%;
+    background-color: blue;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
 
 .contiene {
     width: 100%;
@@ -286,9 +294,9 @@ section {
 .portimg {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
 .portada {
@@ -305,78 +313,59 @@ section div div img {
     padding: 1px 1px 1px 1px;
 }
 
-/* TEXTO DE PORTADA */
-
-.portimg h1 {
-    /* display: flex; */
-    /* top:50em; */
-    padding-left: 1300px;
-    padding-top: 500px;
-    /* align-content: flex-end; */
-    /* flex-direction: row;
-    justify-content: flex-start; */
-    /* text-align: left; */
-    /* float: left; */
-    border: solid 5px rgb(19, 211, 64);
-    /* align-items: flex-end; */
-}
-
-
-
-/* div.textoenc {
-     border: solid 5px rgb(135, 156, 28);
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    align-items: center;
-    padding-bottom: 500px; */
-    /* top: 40px; */
-/* } */
-
-.tit_isa {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1em;
-    font-style: italic;
-    color:burlywood;
-    /* position: relative;
-    top: -40em;
-    right: -85em; */
-    /* margin-right: 2em; */
-    /* display: flex;
-    justify-content: left;
-    align-items:flex-end; */
-}
-
-.contiene {
-    background-color: blue;
+/* .contenedor{
     position: relative;
     display: inline-block;
-    text-align: left;
-    /* margin-left: 100px; */
-/* } */
+    text-align: center;
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+
+/* TEXTO DE PORTADA */
+
 
 .textoena {
     font-family: 'DM Sans', sans-serif;
-    font-size: 5rem;
+    font-size: 5em;
     font-style: oblique;
     /* border: 1px solid yellowgreen; */
     color: burlywood;
     position: absolute;
-    top: 50px;
-    left: 10px;
-    margin-left: 10px;
+    top: 0.125em;
+    left: 0.625em;
+    /* margin-left: 0.625em; */
 }
 
 .textoenb {
     font-family: 'DM Sans', sans-serif;
-    font-size: 3rem;
+    font-size: 3em;
     color:darkorange;
     position: absolute;
-    top: 200px;
-    left: 10px;
-    margin-left: 70px;
+    top: 3.5em;
+    left: 0.625em;
+    /* margin-left: 4.375em; */
 }
 
+.textoenc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    color:burlywood;
+    position: absolute;
+    top: 24em;
+    right: 4em;
+}
+
+/* PARRAFO */
 
 p {
     font-family: 'Lato', sans-serif;
