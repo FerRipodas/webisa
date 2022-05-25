@@ -185,6 +185,7 @@ div nav ul li a {
     text-decoration: none;
 }
 
+
 div nav ul li a:hover {
     text-decoration: none;
     font-size: 1em;
@@ -238,6 +239,7 @@ h4 {
     padding: 2.5vw 1vw 1vw 1vw;
 }
 
+
 .social {
     width: 60%;
     display: flex;
@@ -246,7 +248,7 @@ h4 {
     padding: 1vw 1vw 2vw 1vw;
 }
 
-span {
+div.cont-icon span {
     color: brown;
 }
 
@@ -261,7 +263,7 @@ span {
 
 section {
     width: 100%;
-    height: 1500vh;
+    height: 1em;
     background-color: grey;
     /* position: absolute;
     top: 153px; */
@@ -345,6 +347,12 @@ section div div img {
     /* margin-left: 0.625em; */
 }
 
+.textoena::first-letter {
+    color: #9106fc;
+    font-weight: bold;
+    font-variant: small-caps;
+  }
+
 .textoenb {
     font-family: 'DM Sans', sans-serif;
     font-size: 3em;
@@ -367,6 +375,12 @@ section div div img {
 
 /* PARRAFO */
 
+.text_parra {
+    width: 100%;
+    height: 6em;
+    background-color: cornflowerblue;
+}
+
 p {
     font-family: 'Lato', sans-serif;
     font-style: italic;
@@ -377,27 +391,49 @@ p {
     line-height: 7vh;
     align-items: center;
     text-align: center;
-} */
+}
 
-/* ARTICLE - GALERIA DE FOTOS */
+p::first-letter{
+    font-weight: bolder;
+    color: orangered;
+}
+
+p #xx:link {
+    color: blue
+}
+
+
+/************ ARTICLE - GALERIA DE FOTOS ************/
+/************ ARTICLE - GALERIA DE FOTOS ************/
+
+
 
 .contenedor-columnas {
     /*Modifica aquí el tamaño de las columnas y veras que no se deforma la imagen ni se recorta*/
     /* --col-height: 120px; */
       width: 100%;
+      height: 42em;
       margin: auto;
       text-align: center;
-      margin-bottom: 1000px;
+      margin-bottom: 1px;
+      background-image: url(./bkg/bkg.jpg);
+      background-repeat: repeat;
+      position: relative;
+      display: inline-block;
+      align-items: center;
+      padding-top: 1.5em;
   }
 
   .columx2 {
-      width: 50%;
+      width: 25%;
       float: left;
       padding: 20px 20px;
       box-sizing: border-box;
       /* object-fit: cover; */
       /* z-index: auto; */
       /* object-position: bottom; */
+      position: relative;
+      display: inline-block;
   }
 
   .columna {
@@ -409,7 +445,7 @@ p {
     justify-content: center;
     /* height: var(--col-height); */
     background-color: red;
-    background-image: url('http://picsum.photos/800/600?image=307');
+    background-spanimage: url('http://picsum.photos/800/600?image=307');
     background-color: #ece0d5;
     background-blend-mode: color-burn;/*Esta propiedad es innecesaria, ignorala. La uso simplemente para darle un tono distinto y más claro al fondo*/
       background-position: center;
@@ -468,7 +504,10 @@ p {
     /* text-align: center; */
   /* } */
 
-
+    div.vidisa {
+        width: 100%
+        display: inline-block;
+    }
 
   /* Piede página - FOOTER */
 
