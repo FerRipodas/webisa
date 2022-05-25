@@ -9,6 +9,64 @@ font-family: 'DM Sans', sans-serif;
 font-family: 'Lateef', cursive;
 */
 
+/*
+TERCERA FUENTE
+font-family: 'DM Sans', sans-serif;
+font-family: 'Lateef', cursive;
+font-family: 'Lato', sans-serif;
+
+*/
+    /* border: 1px solid black; */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -26,6 +84,10 @@ html {
 
 body {
     background-color: khaki;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -33,143 +95,170 @@ img {
     max-width: 100%;
 }
 
+/* ****** MAIN - CUERPO PRINCIPAL ****** */
 
-/*ENCABEZADO - HEADER*/
+main{
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+
+/* ****** HEADER - ENCABEZAADO ****** */
 
 .nav-header {
-    /* background-color: khaki; */
-    height: 17vh ;
-    margin: 0 auto;
-    margin-bottom: 1vh;
-    padding: 0px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vw;
+    /* padding: 1vw; */
     font-family: 'DM Sans', sans-serif;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
     display: flex;
-    /* flex-direction: row; */
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content:space-around;
     align-items:center;
 }
 
-/*HEADER - LOGO*/
+/* ***** HEADER - LOGO ***** */
 
-.logo {
-    margin-left: 0%;
-    padding: 0%;
-    height: 23vh;
+div.headimg {
+    width: 19.673em;
+    display: flex;
+    /* border: 1px solid black; */
 }
 
-/* .logo:hover { */
-/* transition: none; */
-/* } */
-
-/* .uno { */
-    /* Qué propiedades usan la transición? */
-    /* transition-property: background-color, font-size;
-    transition-duration: 1s, 5s; */
-    /* Cuánto tarda en activarse la transición */
-    /* transition-delay: 3s; */
-/* } */
-/* .uno:hover { */
-    /* font-size: 38px; */
-    /* background-color: aqua; */
-/* } */
-
 .logo {
+    height: 11.1em;
+    align-items:center ;
+    margin-top: 1.5vh;
+    padding-top: 1vh;
     opacity: 1;
     transition-property: opacity;
     /* Esto es el REGRESO */
     transition-delay: 3s;
     transition-duration: 1.5s;
 }
+
 .logo:hover {
     /* transition: opacity 2s;
         si aplicamos la animación en el elemento CON HOVER
         solo se aplica la transición al IR, no al VOLVER
-    */
-    /* Esto es la IDA */
+    Esto es la IDA */
     transition-delay: 0s;
     transition-duration: 0.3s;
     opacity: 0.3;
 }
 
 
+/* ***** HEADER - NAVEGACIÓN ***** */
 
-/*HEADER - BARRA DE NAVEGACIÓN*/
+
+.headnav {
+    /* border: 1px solid black; */
+    width: 49.051em;
+    box-sizing: border-box;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row;
+    justify-content: center;*/
+    align-items:center;
+}
 
 .nav {
-    /* background-color:red; */
-    border-radius: 10px;
+    width: 49.051em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+div nav ul li a {
+    text-decoration: none;
 }
 
 
-nav ul li:hover {
-    text-decoration: underline;
+div nav ul li a:hover {
+    text-decoration: none;
+    font-size: 1em;
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.75),
+                -3px 10px 12px rgba(0, 0, 0, 0.75);
     transform: scale(1.2, 1.2);
     transition: all 0.5s ease-out;
-    background-color:lightgoldenrodyellow;
+    background-color:khaki;
     color:brown;
 }
 
-nav ul li:focus {
-    text-decoration: underline;
-}
-
-/* hov:hover { */
-    /* font-weight: 800; */
-/* } */
-
-
-/* nav.nav { */
-    /* background-color:burlywood ; */
-    /* max-width: 200%; */
-    /* display:flex ; */
-    /* flex-direction: row; */
-    /* align-items:flex-start; */
-    /* justify-content: space-between; */
-    /* padding: 0.3rem; */
-/* } */
-
 .hul {
-    /* background-color:khaki; */
-    list-style: none;
-    height: 50vh;
-    /* width: 1000px; */
-    max-width: 3000vh;
-    padding: 0;
+    /* height: 50vh; */
+    width: 49em;
+    /* padding: 0; */
     display: flex;
     flex-direction: row;
     justify-content:space-around;
-    /* text-align: center; */
-    align-items: center;
-    border-radius: 10px;
-    /* margin: 0.5rem */
-    /* flex-direction: row; */
-}
-
-li[class*="hitem-"] {
-    list-style: none;
-    /* background-color: burlywood; */
-    border-radius: 20px;
-    height: 10vh;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    /* flex-direction: row; */
     text-align: center;
     align-items: center;
-    border-right: 2px solid gray;
-    flex: 1;
-    margin: 2rem;
+    /* border-radius: 10px; */
 }
 
-/* .hitem-1:hover { */
-    /* font-weight: bolder; */
-/* } */
+/* li[class*="hitem-"] { */
+.headnav nav ul li {
+    box-sizing: border-box;
+    list-style: none;
+    border-radius: 1em;
+    height: 4em;
+    padding: 0.2em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-right: 0.1em solid gray;
+    /* flex: 1; */
+    margin: 2em;
+}
+
 
 /*HEADER - ICONOS REDES*/
 
-.hitem-5 {
+
+.cont-icon {
+    width: 18.965em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h4 {
+    padding: 2.5vw 1vw 1vw 1vw;
+}
+
+
+.social {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1vw 1vw 2vw 1vw;
+}
+
+div.cont-icon span {
+    color: brown;
+}
+
+/*.hitem-5 {
     color: red;
 }
 
@@ -188,7 +277,8 @@ a {
     text-align: right;
     align-items: center;
     /* flex-direction: row; */
-}
+/* } */
+
 
 ul.container2 {
     display: flex;
@@ -207,6 +297,11 @@ ul.container2 {
 span {
     color: brown;
 }
+
+*/
+
+
+
 
 /* hr linea divisoria */
 .sepa {
