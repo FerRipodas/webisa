@@ -1,6 +1,6 @@
 //  seleccionamos los dos elementos que serán clickables
 
-const toggleButton = document.getElementById("button-menu");
+const toggleButton = document.getElementById("buttonmenu");
 const navWrapper = document.getElementById("nav");
 
 /* 

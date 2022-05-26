@@ -168,124 +168,25 @@ div.headimg {
 
 /* ***** HEADER - NAVEGACIÓN ***** */
 
-/* PARA ESCRITORIO CON MEDIA QUERY */
-/* .main-header {
+.headnav {
+    /* border: 1px solid black; */
     width: 49.051em;
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row;
+    justify-content: center;*/
     align-items:center;
-    padding: 0 0.4rem;
-} */
-
-.main-header {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 0 0.4rem;
-  }
-
-
-.main-logo {
-    color: black;
-    font-size: 32px;
-    text-decoration: none;
 }
 
-/* para el escritorio CONMEDIA QUERY */
-/* .main-nav {
+.nav {
     width: 49.051em;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: nowrap;
-} */
-
-.main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    margin-left: -100%;
-    transition: all 0.2s linear;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .main-nav.show {
-    margin-left: 0;
-  }
-
-  .nav-links {
-    background-color: rgb(250, 250, 250);
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  
-  .link-item {
-    margin-top: 2rem;
-    color: #444444;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-  }
-
-  .buttonmenu {
-    z-index: 200;
-    width: 40px;
-    height: 40px;
-    border: none;
-    display: flex;
-    background: none;
-    flex-direction: column; /* Pondrá un span debajo del otro*/
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  /* 
-    Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
-  */
-  
-  .buttonmenu span {
-    width: 37px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #444444;
-    border-radius: 3px;
-    transform-origin: 4px 0px;
-    transition: all 0.2s linear;
-  }
-  
-  /* 
-    con los span dibujamos un icono de cerrar 
-    para mostrar cuándo la navegación este abierta 
-  */
-
-  .buttonmenu.close span {
-    opacity: 1;
-    transform: rotate(45deg) translate(0px, 0px);
-    background: #ffffff;
-  }
-  
-  .buttonmenu.close span:nth-child(2) {
-    transform: rotate(-45deg) translate(-8px, 5px);
-  }
-  
-  .buttonmenu.close span:nth-child(3) {
-    display: none;
-  }
-
+}
 
 div nav ul li a {
     text-decoration: none;
@@ -316,7 +217,7 @@ div nav ul li a:hover {
 }
 
 /* li[class*="hitem-"] { */
-.main-header nav ul li {
+.headnav nav ul li {
     box-sizing: border-box;
     list-style: none;
     border-radius: 1em;
@@ -379,6 +280,7 @@ section {
     background-color: grey;
     /* position: absolute;
     top: 153px; */
+
 }
 
 
@@ -671,15 +573,14 @@ div.red1 {
 
 }
 
-/*
 @media screen and (max-width: 800px) {
     .contenedor {
         width: 100%;
     }
-    .main-header {
-        background-color: var(--color);
+    .headnav {
+        display:none;
     }
-    .main-nav {
+    .nav {
         background-color: var(--nav-color);
     }
     .hul {
@@ -691,58 +592,128 @@ div.red1 {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 600px) {
+
     .contenedor {
         width: 100%;
     }
-    .main-header {
-        background-color: rgb(247, 232, 15);
-    }
-    .main-nav {
-        background-color: rgb(247, 232, 15);
-    }
-    .hul {
-        background-color: rgb(247, 232, 15);
-    }
-}
-*/
-
-@media screen and (min-width: 768px) {
-        .buttonmenu {
-          display: none;
-        }
-      
-        .main-logo {
-          flex-basis: 30%;
-        }
-      
-        .main-nav {
-          position: static;
-          margin-left: 0;
-          flex-basis: 70%;
-          height: 100%;
-        }
-      
-        .nav-links {
-          width: 100%;
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: flex-end;
-          background: white;
-        }
-      
-        .link-item {
-          display: inline-block;
-          margin-top: 0;
-          margin-right: 2rem;
-        }
+    
+    .nav-header {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 0 0.4rem;
       }
+    
+    .headimg {
+        color: black;
+        font-size: 32px;
+        text-decoration: none;
+    }
+    
+    /* para el escritorio CONMEDIA QUERY */
+    /* .main-nav {
+        width: 49.051em;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+    } */
+    
+    .headnav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.2s linear;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      
+      .headnav.show {
+        margin-left: 0;
+      }
+    
+      .nav-links {
+        background-color: rgb(250, 250, 250);
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-start;
+      }
+      
+      .link-item {
+        margin-top: 2rem;
+        color: #444444;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+      }
+    
+      .button-menu {
+        z-index: 200;
+        width: 40px;
+        height: 40px;
+        border: none;
+        display: flex;
+        background: none;
+        flex-direction: column; /* Pondrá un span debajo del otro*/
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      
+      /* 
+        Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+      */
+      
+      .button-menu span {
+        width: 37px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #444444;
+        border-radius: 3px;
+        transform-origin: 4px 0px;
+        transition: all 0.2s linear;
+      }
+      
+      /* 
+        con los span dibujamos un icono de cerrar 
+        para mostrar cuándo la navegación este abierta 
+      */
+    
+      .button-menu.close span {
+        opacity: 1;
+        transform: rotate(45deg) translate(0px, 0px);
+        background: #ffffff;
+      }
+      
+      .button-menu.close span:nth-child(2) {
+        transform: rotate(-45deg) translate(-8px, 5px);
+      }
+      
+      .button-menu.close span:nth-child(3) {
+        display: none;
+      }
+      
 
-      @keyframes girar {
-        from{
-          transform: rotate(0deg);
-        }
-        to{
-          transform: rotate(360deg);
-        }
+}
+
+
+@keyframes girar {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+
+
