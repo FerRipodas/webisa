@@ -1,0 +1,120 @@
+
+MENU HAMBURGUSA HTML
+
+<!-- MENU HAMBURGUSA -->
+
+<input type="checkbox" name="Menú" id="nav__checkbox" class="nav__checkbox">
+<label for="nav__checkbox" class="nav__toggle">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+</label>
+
+<ul class="nav__menu">
+    <li class="menu__logo">
+        <img src="./Logo/logos.png" alt="">
+    </li>
+    <li><a href="#">Presentacion</a></li>
+    <li><a href="#">Expresiones Artisticas</a></li>
+    <li><a href="#">Funciones</a></li>
+    <li><a href="#">Trayectoria</a></li>
+    <li><a href="#">Contacto</a></li>
+</ul>
+
+
+MENU HAMBURGUSA CSS
+
+body {
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: var(--white);
+        background-color: (--primary);
+        height: 100vh;
+    }
+
+    .nav {
+        border-bottom: 1px solid var(--gray);
+    }
+
+    .nav__toggle {
+        position: absolute;
+        cursor: pointer;
+        margin: 0 1rem;
+        right: 0;
+    }
+
+    .nav__toggle svg {
+        width: 1rem;
+        fill:(--white);
+    }
+
+    .nav__toggle .close {
+        display: none;
+    }
+
+    .nav__toggle .close,
+    .nav__toggle .menu {
+        margin-top: 0.3rem;;
+    }
+
+    .nav__checkbox {
+        display:none;
+    }
+
+    .nav_menu {
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .nav__menu li {
+        list-style-type:none;
+        display:block;
+    }
+
+    .nav__menu li:first-child {
+        margin-right: auto;
+        display: block;
+    }
+
+    .nav__menu a {
+        text-decoration: none;
+        color: inherit;
+        font-family: 1.1rem;
+    }
+
+    .menu__logo {
+        height: 30px;
+    }
+
+    .menu__logo img {
+        height: 100%;
+    }
+
+    #nav__checkbox:checked ~ ul.nav__menu li {
+        display: block;
+    }
+
+    #nav__checkbox:checked ~ label.toggle .close {
+        display: block;
+    }
+
+    #nav__checkbox:checked ~ label.toggle .menu {
+        display: none;
+    }
+
+    @media only screen and (min-width: 560px) {
+        .nav__togle {
+            display: none;
+        }
+
+        .nav__menu {
+            flex-direction: :row;
+        }
+
+        .nav__menu li {
+            display:block;
+        }
+    }

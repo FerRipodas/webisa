@@ -1,0 +1,701 @@
+/*PRIMERA FUENTE
+font-family: 'DM Sans', sans-serif;
+font-family: 'Lateef', cursive;
+font-family: 'Lato', sans-serif;
+*/
+
+/*SEGUNDA FUENTE
+font-family: 'DM Sans', sans-serif;
+font-family: 'Lateef', cursive;
+*/
+
+/*
+TERCERA FUENTE
+font-family: 'DM Sans', sans-serif;
+font-family: 'Lateef', cursive;
+font-family: 'Lato', sans-serif;
+
+*/
+    /* border: 1px solid black; */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    background-color: khaki;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --primary:#121f3d;
+    --white:#fff;
+    --gray:#2a324b;
+}
+
+
+/* ****** MAIN - CUERPO PRINCIPAL ****** */
+
+
+
+main{
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    margin: 0;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* ****** HEADER - ENCABEZAADO ****** */
+
+.nav-header {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vw;
+    /* padding: 1vw; */
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+}
+
+/* ***** HEADER - LOGO ***** */
+
+div.headimg {
+    width: 19.673em;
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.logo {
+    height: 11.1em;
+    align-items:center ;
+    margin-top: 1.5vh;
+    padding-top: 1vh;
+    opacity: 1;
+    transition-property: opacity;
+    /* Esto es el REGRESO */
+    transition-delay: 3s;
+    transition-duration: 1.5s;
+}
+
+.logo:hover {
+    /* transition: opacity 2s;
+        si aplicamos la animación en el elemento CON HOVER
+        solo se aplica la transición al IR, no al VOLVER
+    Esto es la IDA */
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    opacity: 0.3;
+}
+
+/* ***** HEADER - NAVEGACIÓN ***** */
+
+.headnav {
+    /* border: 1px solid black; */
+    width: 49.051em;
+    box-sizing: border-box;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row;
+    justify-content: center;*/
+    align-items:center;
+}
+
+.nav {
+    width: 49.051em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+div nav ul li a {
+    text-decoration: none;
+}
+
+
+div nav ul li a:hover {
+    text-decoration: none;
+    font-size: 1em;
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.75),
+                -3px 10px 12px rgba(0, 0, 0, 0.75);
+    transform: scale(1.2, 1.2);
+    transition: all 0.5s ease-out;
+    background-color:khaki;
+    color:rgb(165, 124, 42);
+}
+
+.hul {
+    /* height: 50vh; */
+    width: 49em;
+    /* padding: 0; */
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    text-align: center;
+    align-items: center;
+    /* border-radius: 10px; */
+}
+
+/* li[class*="hitem-"] { */
+.headnav nav ul li {
+    box-sizing: border-box;
+    list-style: none;
+    border-radius: 1em;
+    height: 4em;
+    padding: 0.2em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-right: 0.1em solid gray;
+    /* flex: 1; */
+    margin: 2em;
+}
+
+/* ***** HEADER - ICONOS REDES ***** */
+
+.cont-icon {
+    width: 18.965em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h4 {
+    padding: 2.5vw 1vw 1vw 1vw;
+}
+
+
+.social {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1vw 1vw 2vw 1vw;
+}
+
+div.cont-icon span {
+    color: brown;
+}
+
+.cont-icon h4 {
+    animation: girar 10s linear infinite;
+}
+
+
+
+
+
+/***********CUERPO PRINCIPAL*************/
+/***********CUERPO PRINCIPAL*************/
+/***********CUERPO PRINCIPAL*************/
+
+
+/******* SECCION + ARTICULO *******/
+
+section {
+    width: 100%;
+    height: 1em;
+    background-color: grey;
+    /* position: absolute;
+    top: 153px; */
+
+}
+
+
+/* FOTO DE PORTADA */
+
+.contiene {
+    /* REVISAR ESTO ???????  */
+    width: 100%;
+    background-color: blue;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.contiene {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    /* border: solid 5px blue; */
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portimg {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.portada {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+section div div img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    padding: 1px 1px 1px 1px;
+}
+
+/* .contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+
+/* TEXTO DE PORTADA */
+
+
+.textoena {
+    font-family: 'DM Sans', sans-serif;
+    /* font-size: 5em; */
+    font-size: 5vw;
+    font-style: oblique;
+    /* border: 1px solid yellowgreen; */
+    color: burlywood;
+    position: absolute;
+    top: 0.125em;
+    left: 0.625em;
+    /* margin-left: 0.625em; */
+}
+
+.textoena::first-letter {
+    color: #9106fc;
+    font-weight: bold;
+    font-variant: small-caps;
+  }
+
+.textoenb {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 3vw;
+    color:darkorange;
+    position: absolute;
+    top: 3.5em;
+    left: 0.625em;
+    /* margin-left: 4.375em; */
+}
+
+.textoenc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1vw;
+    font-style: italic;
+    color:burlywood;
+    position: absolute;
+    top: 24em;
+    right: 4em;
+}
+
+/* PARRAFO */
+
+.text_parra {
+    width: 100%;
+    height: 6em;
+    background-color: cornflowerblue;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    /* background-color: orange; */
+    height: 15vh;
+    font-size: 1.5vw;
+    line-height: 2.6vw;
+    align-items: center;
+    text-align: center;
+    padding: 1vw 3vw 1vw 3vw;
+}
+
+p::first-letter{
+    font-weight: bolder;
+    color: orangered;
+}
+
+p #xx:link {
+    color: blue
+}
+
+
+/************ ARTICLE - GALERIA DE FOTOS ************/
+/************ ARTICLE - GALERIA DE FOTOS ************/
+
+
+
+.contenedor-columnas {
+      width: 100%;
+      height: 42em;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 1px;
+      background-image: url(./bkg/bkg.jpg);
+      background-repeat: repeat;
+      position: relative;
+      display: inline-block;
+      align-items: center;
+      padding-top: 1.5em;
+  }
+
+  .columx2 {
+      width: 25%;
+      float: left;
+      padding: 1.25em 1.25em;
+      box-sizing: border-box;
+      position: relative;
+      display: inline-block;
+  }
+
+  .columna {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: stretch;
+    justify-content: center;
+  }
+
+  div.columna img {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .title {
+      background-color:wheat;
+    width: 100%;
+    font-size: 1.15vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4e3224;
+    line-height: 1em;
+    margin: 0;
+    padding: 0.5em;
+    position: relative;
+  }
+
+  .pleca{
+    border-radius: 0.625em;
+    padding-bottom: 0.313em;
+  }
+
+  .columx2 img {
+    width: 100%;
+    height: calc(100% - 100px);
+  }
+
+     div.vidisa {
+        width: 100%
+        display: inline-block;
+    }
+
+     /* ***** FOOTER***** */
+     /* ***** FOOTER***** */
+     /* ***** FOOTER***** */
+
+  footer {
+      width: 100%;
+      height: 100vh;
+      }
+
+  .fotcont {
+      width: 100%;
+      height: 70%;
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      line-height: 7vh;
+      flex: 1;
+      border-bottom: white solid 3px;
+  }
+
+  .gral {
+    width: 100%;
+    height: 53vh;
+    padding: 0.313em;
+    background-color: rgb(0, 0, 0);
+    margin: 0.313em;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .fotligral {
+      list-style: none;
+      color: white;
+  }
+
+div.fotcont h3 {
+    padding-left: 1.875em;
+    color: white;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.fuul li hr {
+    border: 0;
+    border-top: 2px solid rgb(44, 17, 17); 
+    border-bottom: 2px solid rgb(47, 26, 26);
+    height:0;
+}
+
+
+.gral ul li {
+    color: rgb(204, 39, 39);
+}
+
+.gral ul li a {
+    color: rgb(204, 39, 39);
+    text-decoration: none;
+}
+
+.redlog {
+    width: 100%;
+    height: 60%;
+    background-color: rgb(165, 26, 42);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 7vh;
+    flex: 1;
+    border-bottom: white solid 0.188em;
+}
+
+div.red1 {
+    width: 15%;
+    margin: 0.625em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+
+}
+
+
+/* MENU HAMBURGUESA */
+
+.nav__toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0 1rem;
+    right: 0;
+}
+
+.nav__toggle svg {
+    width: 1rem;
+    fill:(--white);
+}
+
+.nav__toggle .close {
+    display: none;
+}
+
+.nav__toggle .close,
+.nav__toggle .menu {
+    margin-top: 0.3rem;;
+}
+
+.nav__checkbox {
+    display:none;
+}
+
+.nav_menu {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+    margin: 1rem;
+}
+
+.nav__menu li {
+    list-style-type:none;
+    display:block;
+}
+
+.nav__menu li:first-child {
+    margin-right: auto;
+    display: block;
+}
+
+.nav__menu a {
+    text-decoration: none;
+    color: inherit;
+    font-family: 1.1rem;
+}
+
+.menu__logo {
+    height: 30px;
+}
+
+.menu__logo img {
+    height: 100%;
+}
+
+#nav__checkbox:checked ~ ul.nav__menu li {
+    display: block;
+}
+
+#nav__checkbox:checked ~ label.toggle .close {
+    display: block;
+}
+
+#nav__checkbox:checked ~ label.toggle .menu {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .contenedor {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contenedor {
+        width: 100%;
+    }
+}
+
+@keyframes girar {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+
+    /* MENU HAMBURGUESA */
+
+
+@media screen and (min-width: 560px) {
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__menu {
+        flex-direction: row;
+    }
+
+    .nav__menu li {
+        display:block;
+    }
+
+    body {
+        font-family: sans-serif;
+        font-weight: lighter;
+        color: var(--white);
+        background-color: (--primary);
+        height: 100vh;
+    }
+
+    .nav {
+        border-bottom: 1px solid var(--gray);
+    }
+}
+
+
+}
+
