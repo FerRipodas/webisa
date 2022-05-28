@@ -44,7 +44,7 @@
 <!-- /* MAIN - CUEPO PRINCIPAL */ -->
 
 
-    <main class="contenedor">
+    <main class="container">
 
 
 <!-- ********** HEADER ************/ -->
@@ -114,8 +114,8 @@
 
             <div class="cont-icon">
 
-                    <h4>Seguinos! <span>en redes</span></h4>
-
+                <div><h4>Seguinos! <span>...en redes</span></h4></div>
+                <div>
                 <ul class="social">
 
                     <li class="ritem-1">
@@ -149,6 +149,7 @@
                     </li>
 
                 </ul>
+            </div>
 
             </div>
 
@@ -174,8 +175,18 @@
 
                 <div class="portimg">
 
-                    <img src="./portada/imgPortada.jpg" class="portada" alt="Imagen Portada">
+                    <!-- <picture>
+                        <source srcset="smaall_imgPortad.jpg" media="(max-width: 400px)">
+                        <source srcset="imgPortada.jpg"> -->
+                        <img src="./portada/imgPortada.jpg" alt="Saltimbanquis" style="width:auto;">
+                    <!-- </picture> -->
+                </div>
+                
+                    
+<!-- <img src="./portada/imgPortada.jpg" class="img-portada" alt="Imagen Portada"> -->
 
+
+                    
 <!-- /* TEXTO DE PORTADA */ -->
 
                      <div class="textoena">Teatro de titeres</div>
@@ -184,11 +195,11 @@
 
                      <div class="textoenc">por Isadora Plateroti</div>
 
-                </div>
+                
 
             </div>
             <div class="text_parra">
-            <p>Lorem ipsum <span id="xx">dolor</span> sit amet consectetur, adipisicing elit. Eos architecto odit, eveniet cumque voluptatum <span  id="bb">dolores</span> quidem totam culpa necessitatibus veritatis minus nemo, magnam eaque neque magni itaque, fuga accusamus earum.</p>
+            <p>Lorem ipsum <span id="dolo">dolor</span> sit amet consectetur, adipisicing elit. Eos architecto odit, eveniet cumque voluptatum <span  class="bb">dolores</span> quidem totam culpa necessitatibus veritatis minus nemo, magnam eaque neque magni itaque, fuga accusamus earum.</p>
             </div>
 
             <!-- Galeria de fotos
@@ -276,16 +287,16 @@
         
                 </div>
 
-                <div class="vidisa">
-                    
-                    <video src="./video/video.mp4" controls> 
-    
-                    Noche Mágica de Reyes
-    
-                    </video>
-                </div>
-
             </article>
+
+            <div class="vidisa">
+                    
+                <video src="./video/video.mp4" controls> 
+
+                Noche Mágica de Reyes
+
+                </video>
+            </div>
 
     </section>
 
