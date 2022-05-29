@@ -410,9 +410,10 @@ input, textarea {
 }
 
 textarea {
+    max-width: 100%;
     min-height: 6.25em;
     max-height: 12.5em;
-    width: 60vh;
+    /* width: 60vh; */
 }
 
 #boton {

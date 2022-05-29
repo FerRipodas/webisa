@@ -81,14 +81,19 @@ html {
     height: 100%;
 }
 
-root: {
-    --nav-color: hotpink;
-    --color: rgb(211, 244, 183)
-    --colordefondo:khaki;
+:root {
+    --fondo:  #f0e68c;
+    --negro:  #000000;
+    --borde: #7b68ee;
+    --backg:  #6bb1d4;
+    --blanco: #ffffff;
+    --xhover: #a57c2a;
+    --bkg2: #6bb1d4;
 }
 
 body {
-    background-color: khaki;
+    background-color: var(--fondo);
+    color: #ffffff;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -105,12 +110,14 @@ img {
 /* ****** MAIN - CUERPO PRINCIPAL ****** */
 
 main {
+    background-color: var(--fondo);
     max-width: 1500px;
     height: auto;
     margin:auto
 }
 
 .container {
+    background-color: var(--fondo);
     max-width: 1500px;
     height: auto;
     margin:auto
@@ -131,11 +138,14 @@ main {
 /* ****** HEADER - ENCABEZAADO ****** */
 
 header {
+    background-color: var(--fondo);
     width: 100%;
     height: 10em;
+    margin-bottom: 10px;
 }
 
 header.nav-header {
+    background-color: var(--fondo);
     width: 100%;
     height: 10em;
     box-sizing: border-box;
@@ -153,7 +163,7 @@ header.nav-header {
     grid-template-columns: 1fr 3fr 1fr;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap:wrap;
     gap:10px;
 
     /* FLEXBOX
@@ -172,6 +182,7 @@ header.nav-header {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+    margin-right: 100px;
     margin-bottom: 2vh;
 }
 
@@ -267,6 +278,8 @@ ul.hul {
 }
 
 div nav ul li a {
+    font-family: sans-serif;
+    font-size: 1em;
     text-decoration: none;
 }
 
@@ -274,12 +287,12 @@ div nav ul li a {
 div nav ul li a:hover {
     text-decoration: none;
     font-size: 1em;
-    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.75),
-                -3px 10px 12px rgba(0, 0, 0, 0.75);
+    text-shadow: 5px 10px 10px var(--negro),
+                -3px 10px 12px var(--negro);
     transform: scale(1.2, 1.2);
     transition: all 0.5s ease-out;
-    background-color:khaki;
-    color:rgb(165, 124, 42);
+    background-color: var(--fondo);
+    color: var(--xhover);
 }
 
 /* .hul { */
@@ -335,6 +348,7 @@ div.cont-icon {
 }
 
 h4 {
+    color: var(--negro);
     display:inline-flex;
     justify-content: center;
     align-items: center;
@@ -408,7 +422,8 @@ div.contiene {
     background-color: aquamarine;
     width:100%;
     height: auto;
-    border: 4px solid mediumslateblue;
+    border: 4px solid var(--borde);
+    margin-bottom: 10px;
     /* background-image: url(./portada/imgPortada.jpg);
     background-size: cover;
     width: 100%;
@@ -441,7 +456,7 @@ div.contiene {
 }
 
 .portimg {
-    background-color: #4e3224;
+    background-color: var(--xhover) ;
     width: 100%;
     height: auto;
     text-align: center;
@@ -601,6 +616,7 @@ article {
       width: 100%;
       height: 100%;
       margin: 0.2vw;
+      box-sizing: border-box;
       text-align: center;
       /* margin-bottom: 1px; */
       background-image: url(./bkg/bkg.jpg);
@@ -645,7 +661,7 @@ article {
   }
 
   .columna {
-      background-color: #6bb1d4;
+      background-color: var(--bkg2);
     box-sizing: border-box;
     width: 100%;
     height: auto;
@@ -657,13 +673,15 @@ article {
     justify-content: center;
     border-radius: 13px;
     padding: 10px;
+    /* object-fit: cover; */
 
   }
 
   div.columna img {
     /* width: 98% !important;; */
-    border-radius: ;
-    height: auto;
+    border-radius: 15px;
+    height: 435px;
+    object-fit: cover;
   }
 
   .title {
@@ -751,15 +769,16 @@ article {
 
   .fotcont {
       width: 100%;
-      height: 100%;
+      height: 35vw;
       background-color: rgb(0, 0, 0);
-      border-bottom: white solid 3px;
+      border-bottom: var(--blanco) solid 3px;
       line-height: 7vh;
 
       display:grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       justify-content: center;
       align-items: center;
+      gap:5vw;
       
 
       /* FLEXBOX
@@ -784,7 +803,12 @@ article {
     box-sizing: border-box; */
   }
 
+h3 {
+    padding: 2vw 0;
+}
+
   .fotligral {
+      font-size: 1.1vw;
       list-style: none;
       color: white;
       margin: 1vh;
@@ -794,7 +818,7 @@ div.fotcont h3 {
     padding-left: 1.875em;
     color: white;
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.5vw;
 }
 
 .fuul li hr {
@@ -813,6 +837,9 @@ div.fotcont h3 {
     color: rgb(204, 39, 39);
     text-decoration: none;
 }
+
+/* ICONOS FOOTER */
+
 
 .redlog {
     max-width: 100%;
@@ -837,7 +864,7 @@ div.fotcont h3 {
 div.red1 {
     width: 100%;
     height: auto;
-    margin: 1.5em;
+    margin: 1.5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -857,13 +884,13 @@ div.red1 img {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin: 0rem 3rem 0rem 3rem;
+    margin: 0vw 3vw 0vw 3vw;
 }
 
 div.log1 {
     width: 100%;
     height: auto;
-    margin: 1.5em;
+    margin: 1.5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -871,46 +898,118 @@ div.log1 {
     text-align: center;
 }
 
-div.red1 img {
+div.log1 img {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin: 0rem 3rem 0rem 3rem;
+    margin: 0vw 3vw 0vw 3vw;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 340px) {
     .contenedor {
         width: 100%;
     }
-    .headnav {
-        background-color: var(--color);
-    }
-    .nav {
-        background-color: var(--nav-color);
-    }
-    .hul {
-        background-color: var(--color)i;
-    }
-
-    .vidisa {
-        display: none;
-    }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 767px) {
+    .hul {
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+    }
+    div nav ul li a {
+        font-size: 2em;
+    }
+
+    p {
+        background-color: var(--fondo);
+        font-size: 1.5vh;
+        line-height: 20px;
+        color: var(--negro);
+    }
+
+    .contenedor-columnas {
+        display: block;
+    }
+    .columx2 {
+        max-width: 100%;
+        height: 350px;;
+    }
+    .title {
+        max-width: 100%;
+        font-size: 1.5vh;
+    }
+    div.columna img:nth-child(4) {
+        object-position: bottom;
+    }
+
+    video {
+        width: 98%;
+        margin: 15px;
+    }
+
+    .fotcont {
+        width: 100%;
+        height: 100%;  
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        text-align: center;
+    }
+    .fotligral {
+        font-size:0.7em;
+        margin: 0;
+        text-align: center;
+        line-height: 30px;
+    }
+    div.fotcont h3 {
+        font-size: 1em;
+        margin: 0;
+        text-align: center;
+        padding: 0%;
+        line-height: 30px;
+    }
+    .redlog {
+        max-width: 100%;
+        height: auto;
+    }
+    div.red1 img {
+        width: 100%;
+    }
+    .gral {
+        height: 28vh;
+        margin: 0;
+        padding: 0;
+        border: 2px solid var(--fondo)
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
     .contenedor {
         width: 100%;
     }
-    .headnav {
-        background-color: rgb(247, 232, 15);
+}
+
+@media screen and (max-width: 1200px) {
+    .contenedor {
+        width: 100%;
     }
-    .nav {
-        background-color: rgb(247, 232, 15);
+}
+
+@media screen and (max-width: 1400px) {
+    .contenedor {
+        width: 100%;
     }
-    .hul {
-        background-color: rgb(247, 232, 15);
+
+@media screen and (min-width: 1600px) {
+    body {
+        width: 100%;
     }
+
+
+
+
 }
 
 
