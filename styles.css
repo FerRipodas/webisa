@@ -91,15 +91,18 @@ html {
     --bkg2: #6bb1d4;
 }
 
+
 body {
-    background-color: var(--fondo);
-    color: #ffffff;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-
+	background: linear-gradient(-45deg, #ff3939, #ba4c76, #a5e81e, #f0f023);
+	background-size: 300% 100%;
+	animation: gradient 15s ease infinite;
+	/* height: 100vh; */
 }
+
 
 img {
     max-width: 100%;
@@ -110,14 +113,14 @@ img {
 /* ****** MAIN - CUERPO PRINCIPAL ****** */
 
 main {
-    background-color: var(--fondo);
+    /* background-color: var(--fondo); */
     max-width: 1500px;
     height: auto;
     margin:auto
 }
 
 .container {
-    background-color: var(--fondo);
+    /* background-color: var(--fondo); */
     max-width: 1500px;
     height: auto;
     margin:auto
@@ -138,14 +141,14 @@ main {
 /* ****** HEADER - ENCABEZAADO ****** */
 
 header {
-    background-color: var(--fondo);
+    /* background-color: var(--fondo); */
     width: 100%;
     height: 10em;
     margin-bottom: 10px;
 }
 
 header.nav-header {
-    background-color: var(--fondo);
+    /* background-color: var(--fondo); */
     width: 100%;
     height: 10em;
     box-sizing: border-box;
@@ -290,8 +293,13 @@ div nav ul li a:hover {
                 -3px 10px 12px var(--negro);
     transform: scale(1.2, 1.2);
     transition: all 0.5s ease-out;
-    background-color: var(--fondo);
-    color: var(--xhover);
+    /* background-color: var(--fondo); */
+    /* color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+	/* background-size: 400% 400%; */
+	/* animation: gradient 15s ease infinite; */
+
+
 }
 
 /* .hul { */
@@ -419,10 +427,12 @@ section {
 /* FOTO DE PORTADA */
 
 div.contiene {
-    background-color: aquamarine;
+    background: linear-gradient(-45deg, #a5e81e,#399fff, #f0f023, #43b593);
+	background-size: 300% 100%;
+	animation: gradient 15s ease infinite;
     width:100%;
     height: auto;
-    border: 4px solid var(--borde);
+    /* border: 4px solid var(--borde); */
     margin-bottom: 10px;
     /* background-image: url(./portada/imgPortada.jpg);
     background-size: cover;
@@ -456,7 +466,10 @@ div.contiene {
 }
 
 .portimg {
-    background-color: var(--xhover) ;
+    /* background-color: var(--xhover) ; */
+    background: linear-gradient(-45deg, #78b2b2,#f7c78b,#8cf008, #f2f1bd );
+	background-size: 300% 300%;
+	animation: gradient 15s ease infinite;
     width: 100%;
     height: auto;
     text-align: center;
@@ -497,7 +510,7 @@ div.portimg img {
     object-fit: fill;
 
     padding: 1px 1px 1px 1px; */
-    
+
 
     /* FLEXBOX
     display: inline-block; */
@@ -724,7 +737,7 @@ article {
         align-content: stretch;
         justify-content: center;
         border-radius: 13px;
-    
+
     }
 
     video {
@@ -752,7 +765,7 @@ article {
 
         /* FLEXBOX
         display: inline-block; */
-    
+
 
      /* ***** FOOTER***** */
      /* ***** FOOTER***** */
@@ -779,7 +792,7 @@ article {
       justify-content: center;
       align-items: center;
       gap:5vw;
-      
+
 
       /* FLEXBOX
       display: flex;
@@ -843,10 +856,10 @@ div.fotcont h3 {
 
 .redlog {
     max-width: 100%;
-    height: 100%;
+    height: auto;
     background-color: rgb(165, 26, 42);
     border-bottom: white solid 0.188em;
-    line-height: 7vh;
+    /* line-height: 7vh; */
 
     display: grid;
     grid-template-columns: 1fr;
@@ -880,6 +893,8 @@ div.red1 {
 }
 
 div.red1 img {
+    max-width: 4vw;
+    max-height: 4vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -896,21 +911,23 @@ div.log1 {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 1vw;
 }
 
 div.log1 img {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    display: inline-block;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
     margin: 0vw 3vw 0vw 3vw;
 }
 
-@media screen and (max-width: 340px) {
+/* @media screen and (max-width: 340px) {
     .contenedor {
         width: 100%;
     }
-}
+} */
 
 @media screen and (max-width: 767px) {
     .hul {
@@ -937,45 +954,53 @@ div.log1 img {
     }
 
     .contenedor-columnas {
+        max-width: 100%;
         display: block;
+        margin:2vh;
     }
     .columx2 {
         max-width: 100%;
-        height: 350px;;
+        height: auto;
     }
     .title {
         max-width: 100%;
-        font-size: 1.5vh;
+        font-size: 1rem;
     }
-    div.columna img:nth-child(4) {
+    /* div.columna img:nth-child(4) {
         object-position: bottom;
-    }
+    } */
 
     video {
-        width: 98%;
-        margin: 15px;
+        width: auto;
+        margin: 2vh;
+    }
+
+    .marcvid {
+        text-align: center;
     }
 
     .fotcont {
-        width: 100%;
-        height: 100%;  
+        width: auto;
+        height: auto;
         display:grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
+        align-items: center;
         text-align: center;
+        margin: 5px;
     }
     .fotligral {
-        font-size:0.7em;
-        margin: 0;
+        font-size:0.7rem;
+        margin: 1px;
         text-align: center;
-        line-height: 30px;
+        line-height: 7px;
     }
     div.fotcont h3 {
-        font-size: 1em;
-        margin: 0;
+        font-size: 1rem;
+        margin-top: 5px;
         text-align: center;
         padding: 0%;
-        line-height: 30px;
+        /* line-height: 3px; */
     }
     .redlog {
         max-width: 100%;
@@ -1003,6 +1028,12 @@ div.log1 img {
 
 }
 
+@media only screen and (min-width: 981px) {
+    input#boton.boton {
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .contenedor {
         width: 100%;
@@ -1024,12 +1055,7 @@ div.log1 img {
     body {
         width: 100%;
     }
-
-
-
-
 }
-
 
 @keyframes skew {
     0% {
@@ -1039,3 +1065,15 @@ div.log1 img {
       transform: skewX(-20deg);
     }
   }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
